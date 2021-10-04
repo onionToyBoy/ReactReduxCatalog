@@ -3,19 +3,24 @@
 .container {
     display: flex;
     flex: 1;
-    justify-content: space-between;
     height: 60px;
-    padding: 0 100px 0 100px;
+    /* padding: 0 100px 0 100px; */
     background: -webkit-linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
     background: -moz-linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
     background: linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
+}
+
+.navBlock {
+    display: flex;
+    width: 55%;
+    margin: 0 auto;
 }
 
 .logo {
     display: flex;
     flex: 1;
     font-family: "Press Start 2P";
-    font-size: 16px;
+    font-size: 18px;
     margin: auto;
     text-decoration: none;
     color: black;
@@ -23,9 +28,6 @@
 
 .logo span {
     user-select: none;
-}
-
-.logo span:hover {
     text-shadow: 2px 2px 3px red, 0 0 1em red;
     color: orange;
 }
@@ -37,12 +39,22 @@
 
 
 .cart {
-    height: 50px;
+    height: 40px;
     width: auto;
+    margin: auto;
+    transition: 0.3s;
+    margin-top: 10px;
+    user-select: none;
 }
 
-.navBlock {
-    display: flex;
-    flex: 1;
-    justify-content: end;
+.cart:hover {
+    height: 44px;
+    transition: 0.3s;
 }
+
+.cart:active {
+    height: 40px;
+    transition: 0s;
+}
+
+

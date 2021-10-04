@@ -1,19 +1,27 @@
-.content{
+.content {
     width: 60%;
-    height: 700px;
+    height: viewport;
     background: #272727FF;
     box-shadow: 0 8px 32px 0 rgba(167, 26, 144, 0.37);
     padding: 15px;
     margin: auto;
 }
 
-.input{
+.input {
     display: flex;
-    margin: 0 auto;
     background-color: #353535FF;
     color: cornsilk;
     font-size: 20px;
-    width: 40%;
+    width: 300px;
     padding: 10px;
-    border-radius: 10px;
+    flex: 4;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.serchBar {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
 }

@@ -1,0 +1,23 @@
+.button {
+    background-color: #505050FF;
+    border: 1px solid #868686FF;
+    text-align: center;
+    display: flex;
+    flex: 1;
+    border-radius: 5px;
+}
+
+.button div {
+    margin: auto;
+    font-size: 20px;
+    color: #272727FF;
+    user-select: none;
+}
+
+.button:hover {
+    background-color: #5E5B65FF;
+}
+
+.button:active {
+    background-color: rgb(133, 121, 145);
+}
