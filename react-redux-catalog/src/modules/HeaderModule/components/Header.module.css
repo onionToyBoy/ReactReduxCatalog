@@ -1,6 +1,31 @@
-.container{
-    display:flex;
-    flex:1;
-    background-color: blueviolet;
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
     height: 60px;
+    padding: 0 70px 0 70px;
+    background: -webkit-linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
+    background: -moz-linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
+    background: linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
+}
+
+.logo{
+    display: flex;
+    flex: 1;  
+    font-family: "Press Start 2P";
+    font-size: 16px;
+    margin: auto;
+}
+
+.cart{
+    height: 50px; 
+    width: auto;
+}
+
+.navBlock{
+    display: flex;
+    flex: 1;
+    justify-content: end;
 }
