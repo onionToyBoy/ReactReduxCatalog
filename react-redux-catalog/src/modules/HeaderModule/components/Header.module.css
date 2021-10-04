@@ -1,0 +1,6 @@
+.container{
+    display:flex;
+    flex:1;
+    background-color: blueviolet;
+    height: 60px;
+}
