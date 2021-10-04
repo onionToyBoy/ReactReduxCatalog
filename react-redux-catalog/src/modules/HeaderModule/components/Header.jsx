@@ -6,7 +6,9 @@ import styles from './Header.module.css';
 export const Header = () => {
 	return (
 		<nav className={styles.container}>
-			<div className={styles.logo}>Task for Andersen</div>
+			<NavLink to=''className={styles.logo}>
+				<span>Task for Andersen</span>
+			</NavLink>
 			<NavLink to='/cart' className={styles.navBlock}>
 				<img
 					src='https://cdn0.iconfinder.com/data/icons/minimal-set-seven/32/minimal-49-512.png'

@@ -5,26 +5,43 @@
     flex: 1;
     justify-content: space-between;
     height: 60px;
-    padding: 0 70px 0 70px;
+    padding: 0 100px 0 100px;
     background: -webkit-linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
     background: -moz-linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
     background: linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
 }
 
-.logo{
+.logo {
     display: flex;
-    flex: 1;  
+    flex: 1;
     font-family: "Press Start 2P";
     font-size: 16px;
     margin: auto;
+    text-decoration: none;
+    color: black;
 }
 
-.cart{
-    height: 50px; 
+.logo span {
+    user-select: none;
+}
+
+.logo span:hover {
+    text-shadow: 2px 2px 3px red, 0 0 1em red;
+    color: orange;
+}
+
+.logo span:active {
+    text-shadow: 3px 3px 3px red, 3 3 6em red;
+    color: white;
+}
+
+
+.cart {
+    height: 50px;
     width: auto;
 }
 
-.navBlock{
+.navBlock {
     display: flex;
     flex: 1;
     justify-content: end;
