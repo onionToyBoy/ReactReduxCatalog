@@ -17,6 +17,7 @@ export const Header = () => {
 						className={styles.cart}
 					/>
 				</NavLink>
+				<div className={styles.logIn}>Log in</div>
 			</div>
 		</nav>
 	);

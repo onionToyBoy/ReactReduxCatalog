@@ -13,7 +13,7 @@ export const BeerCard = ({ item }) => {
 				<div className={styles.description}>{description}</div>
 			</div>
 			<div className={styles.button}>
-				<Button text={'To cart'} />
+				<Button text={'Add to cart'} />
 			</div>
 		</section>
 	);

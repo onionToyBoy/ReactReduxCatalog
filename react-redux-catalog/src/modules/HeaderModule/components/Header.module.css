@@ -37,7 +37,6 @@
     color: white;
 }
 
-
 .cart {
     height: 40px;
     width: auto;
@@ -45,6 +44,7 @@
     transition: 0.3s;
     margin-top: 10px;
     user-select: none;
+    padding-right: 20px;
 }
 
 .cart:hover {
@@ -57,4 +57,19 @@
     transition: 0s;
 }
 
+.logIn {
+    font-size: 20px;
+    margin: auto;
+    padding: 5px 20px;
+    font-weight: 700;
+    user-select: none;
+}
 
+.logIn:hover {
+    text-shadow: 2px 2px 3px red, 0 0 1em red;
+    color: orange;
+}
+
+.logIn:active {
+    color: rgb(233, 206, 52);
+}
