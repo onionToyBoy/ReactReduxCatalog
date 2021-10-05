@@ -22,7 +22,6 @@ export const Content = () => {
 					value={searchValue}
 					onInput={(text) => setSearchValue(text.target.value)}
 				/>
-				<Button fn={onSearch} text={'Search'} />
 			</div>
 			<BeerList />
 		</div>
