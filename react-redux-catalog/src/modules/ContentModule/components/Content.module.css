@@ -1,9 +1,9 @@
 .content {
-    width: 60%;
+    width: 70%;
     height: viewport;
     background: #272727FF;
     box-shadow: 0 8px 32px 0 rgba(167, 26, 144, 0.37);
-    padding: 15px;
+    padding: 40px;
     margin: auto;
 }
 
@@ -24,4 +24,5 @@
     width: 70%;
     margin: auto;
     justify-content: space-between;
+    padding-bottom: 10px;
 }

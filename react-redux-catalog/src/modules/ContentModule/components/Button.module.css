@@ -1,10 +1,11 @@
 .button {
+    border: 1px solid #848484FF;
+    border-radius: 5px;
     background-color: #505050FF;
-    border: 1px solid #868686FF;
+    padding: 10px;
     text-align: center;
     display: flex;
     flex: 1;
-    border-radius: 5px;
 }
 
 .button div {
@@ -16,8 +17,11 @@
 
 .button:hover {
     background-color: #5E5B65FF;
+    color: white;
+    transition: 0.3s;
 }
 
 .button:active {
-    background-color: rgb(133, 121, 145);
+    background-color: rgb(185, 181, 189);
+    color: black;
 }

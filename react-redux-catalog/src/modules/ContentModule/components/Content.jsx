@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import styles from './Content.module.css';
 import { Button } from './Button';
+import { BeerList } from './BeerList';
 
 export const Content = () => {
 	const [searchValue, setSearchValue] = useState('');
@@ -21,8 +22,9 @@ export const Content = () => {
 					value={searchValue}
 					onInput={(text) => setSearchValue(text.target.value)}
 				/>
-				<Button onSearch={onSearch} text={'Search'} />
+				<Button fn={onSearch} text={'Search'} />
 			</div>
+			<BeerList />
 		</div>
 	);
 };
