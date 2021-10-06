@@ -3,55 +3,71 @@
     width: 47%;
     border: 1px solid rgb(74, 23, 122);
     margin: 10px;
-    padding: 30px 20px 20px 20px;
-    background-color: #353535FF;
+    padding: 20px;
+    background-color: rgb(71, 71, 71);
     border-radius: 5px;
-    flex-direction: column;
-    align-items:center;
-    flex-wrap: wrap;
-
-}
-
-.infoBlock {
-    display: flex;
-    width: 100%;
-    margin: auto;
-    align-items: center;
-    padding-bottom: 25px;
+    flex-direction: row;
+    
+  
 }
 
 .container:hover {
     border: 1px solid rgb(104, 37, 167);
 }
 
+.imageBlock {
+    width: 33%;
+    height: 100%;
+    padding: 10px;
+}
+
 .image {
     max-height: 210px;
     width: auto;
-    margin: auto;
     user-select: none;
+    padding-bottom: 20px;
+}
+
+.composition {
+    display: flex;
+    margin: 0 auto;
+    color: rgb(150, 129, 14);
+    font-size: 17px;
+    flex-direction: column;
 
 }
 
-.description {
+.composition div {
+    padding-top: 10px;
+}
+
+.infoBlock {
     display: flex;
     flex-direction: column;
-    color: rgb(156, 153, 149);
+    height: 100%;
+    width: 67%;
     align-items: center;
-    padding-left: 25px;
+    padding: 20px 0;
+    color: rgb(156, 153, 149);
     font-size: 15px;
 }
 
 .name {
+    align-items: flex-start;
     font-size: 20px;
-    margin-bottom: 15px;
+    padding-bottom: 20px;
     color: rgb(150, 129, 14);
 }
 
+.discription {
+    margin: 0 auto;
+}
+
 .button {
-    color: #848484FF;
     margin-top: auto;
     margin-bottom: 5px;
     user-select: none;
     display: flex;
+    width: 200px;
+    padding-top: 20px;
 }
-

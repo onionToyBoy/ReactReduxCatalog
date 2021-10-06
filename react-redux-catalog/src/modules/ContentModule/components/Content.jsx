@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 import styles from './Content.module.css';
-import { Button } from './Button';
 import { BeerList } from './BeerList';
 
 export const Content = () => {
@@ -13,10 +12,8 @@ export const Content = () => {
 		setSearchValue('');
 	};
 
-	const onPressEnter = (e) => {
-		if (e.key === 'Enter') {
-			setSearchValue('');
-		}
+	const createCross = () => {
+		return <div className={styles.cross} onClick={()=>setSearchValue('')}>х</div>;
 	};
 
 	return (
@@ -28,8 +25,8 @@ export const Content = () => {
 					className={styles.input}
 					value={searchValue}
 					onInput={(text) => setSearchValue(text.target.value)}
-					onKeyDown={onPressEnter}
 				/>
+				{searchValue && createCross()}
 			</div>
 			<BeerList />
 		</div>

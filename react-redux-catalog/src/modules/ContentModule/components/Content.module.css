@@ -1,5 +1,5 @@
 .content {
-    width: 70%;
+    width: 75%;
     height: viewport;
     background: #272727FF;
     box-shadow: 0 8px 32px 0 rgba(167, 26, 144, 0.37);
@@ -25,4 +25,12 @@
     margin: auto;
     justify-content: space-between;
     padding-bottom: 10px;
+}
+
+.cross{
+    color:rgb(148, 124, 124);
+    font-size: 30px;
+    border: 2px solid #353535FF;
+    padding: 0 10px;
+    border-radius: 10px;
 }
