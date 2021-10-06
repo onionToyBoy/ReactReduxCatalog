@@ -1,6 +1,6 @@
-export const getBeerList = async (searchValue = false) => {
+export const getBeerList = async searchValue => {
 	try {
-		const response = searchValue
+		const response = searchValue!==''
 			? await fetch(`https://api.punkapi.com/v2/beers?beer_name=${searchValue}`)
 			: await fetch('https://api.punkapi.com/v2/beers');
 		return response.json();

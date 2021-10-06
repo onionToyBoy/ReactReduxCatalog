@@ -87,3 +87,7 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}

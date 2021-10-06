@@ -1,0 +1,1 @@
+export const selectBeerList = state => state.beerReducer.beer;
