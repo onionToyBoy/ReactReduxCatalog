@@ -25,9 +25,10 @@
 }
 
 .image {
-    max-height: 100px;
+    max-height: 210px;
     width: auto;
     margin: auto;
+    user-select: none;
 
 }
 

@@ -9,7 +9,14 @@ export const Content = () => {
 
 	const onSearch = () => {
 		console.log(searchValue);
+
 		setSearchValue('');
+	};
+
+	const onPressEnter = (e) => {
+		if (e.key === 'Enter') {
+			setSearchValue('');
+		}
 	};
 
 	return (
@@ -21,6 +28,7 @@ export const Content = () => {
 					className={styles.input}
 					value={searchValue}
 					onInput={(text) => setSearchValue(text.target.value)}
+					onKeyDown={onPressEnter}
 				/>
 			</div>
 			<BeerList />
