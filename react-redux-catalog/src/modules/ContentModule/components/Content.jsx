@@ -6,12 +6,6 @@ import { BeerList } from './BeerList';
 export const Content = () => {
 	const [searchValue, setSearchValue] = useState('');
 
-	const onSearch = () => {
-		console.log(searchValue);
-
-		setSearchValue('');
-	};
-
 	const createCross = () => {
 		return <div className={styles.cross} onClick={()=>setSearchValue('')}>х</div>;
 	};
@@ -28,7 +22,7 @@ export const Content = () => {
 				/>
 				{searchValue && createCross()}
 			</div>
-			<BeerList />
+			<BeerList searchValue={searchValue}/>
 		</div>
 	);
 };
