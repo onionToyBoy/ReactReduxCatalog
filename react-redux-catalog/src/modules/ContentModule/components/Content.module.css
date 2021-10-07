@@ -34,3 +34,10 @@
     padding: 0 10px;
     border-radius: 10px;
 }
+
+@media (max-width: 600px){
+    .content{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

@@ -69,3 +69,25 @@
     width: 200px;
     padding-top: 20px;
 }
+
+@media (max-width: 1280px){
+    .image {
+        max-height: 170px;
+    }
+}
+
+@media (max-width: 1100px){
+    .image {
+        max-height: 200px;
+    }
+    .container{
+        flex:1;
+    }
+
+}
+
+@media (max-width: 710px){
+    .image {
+        max-height: 150px;
+    }
+}
