@@ -5,18 +5,14 @@ import styles from './Content.module.css';
 import { BeerList } from './BeerList';
 import { selectBeerList } from '../selectors';
 import { getBeer } from '../thunk';
-import { store } from '../../../store/store';
 
 export const Content = () => {
 	const [searchValue, setSearchValue] = useState('');
-	const [isLoading, setLoading] = useState(true);
-	const [data, setData] = useState([]);
+	//const [isLoading, setLoading] = useState(true);
 
 	const dispatch = useDispatch();
 
 	const beerList = useSelector(selectBeerList);
-
-	console.log(store.getState())
 
 	useEffect(() => {
 		dispatch(getBeer(searchValue));
@@ -42,7 +38,7 @@ export const Content = () => {
 				/>
 				{searchValue && createCross()}
 			</div>
-			{beerList.length &&<BeerList data={beerList} />}
+			{beerList.length && <BeerList data={beerList} />}
 		</div>
 	);
 };

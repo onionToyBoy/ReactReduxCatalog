@@ -1,7 +1,12 @@
-import { SET_BEER } from '../../../constants/actionTypes';
+import {
+	SET_BEER,
+	ADD_TO_CART,
+	REMOVE_FROM_CART,
+} from '../../../constants/actionTypes';
 
 export const INITIAL_STATE = {
 	beer: [],
+	cart: [],
 };
 
 export const beerReducer = (state = INITIAL_STATE, action) => {
@@ -11,6 +16,20 @@ export const beerReducer = (state = INITIAL_STATE, action) => {
 				...state,
 				beer: action.payload,
 			};
+		case ADD_TO_CART: {
+			return {
+				...state,
+				cart: [...state.cart, action.payload],
+			};
+		}
+		case REMOVE_FROM_CART: {
+			const updatedCart = state.cart.filter((el) => el.id !== action.payload);
+
+			return {
+				...state,
+				cart: updatedCart,
+			};
+		}
 		default:
 			return state;
 	}
