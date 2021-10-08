@@ -5,8 +5,8 @@ import styles from './BeerCard.module.css';
 import { Button } from './Button';
 import { addToCart, removeFromCart } from '../actions';
 
-export const BeerCard = ({ item }) => {
-	const [cartStatus, setCartStatus] = useState(false);
+export const BeerCard = ({ item, status }) => {
+	const [cartStatus, setCartStatus] = useState(status);
 
 	const dispatch = useDispatch();
 
@@ -40,6 +40,7 @@ export const BeerCard = ({ item }) => {
 					<Button
 						text={cartStatus ? 'Remove from cart' : 'Add to cart'}
 						fn={changeCartStatus}
+
 					/>
 				</div>
 			</div>

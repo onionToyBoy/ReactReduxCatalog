@@ -6,7 +6,6 @@
     width: 100%;
     flex: 1;
     height: 60px;
-    
     background: -webkit-linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
     background: -moz-linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
     background: linear-gradient(180deg, rgb(62, 128, 128) 4%, rgb(154, 82, 182) 78%);
