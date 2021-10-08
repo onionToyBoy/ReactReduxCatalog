@@ -5,6 +5,7 @@ import styles from './Content.module.css';
 import { BeerList } from './BeerList';
 import { selectBeerList } from '../selectors';
 import { getBeer } from '../thunk';
+import noResults from '../../../images/noResults.png';
 
 export const Content = () => {
 	const [searchValue, setSearchValue] = useState('');
@@ -38,7 +39,11 @@ export const Content = () => {
 				/>
 				{searchValue && createCross()}
 			</div>
-			{beerList.length && <BeerList data={beerList} />}
+			{beerList.length ? (
+				<BeerList data={beerList} />
+			) : (
+				<img src={noResults} className={styles.noResults} alt='no results' />
+			)}
 		</div>
 	);
 };

@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import styles from './BeerCard.module.css';
 import { Button } from './Button';
 import { addToCart, removeFromCart } from '../actions';
+import imageMissing from '../../../images/imageMissing.png';
 
 export const BeerCard = ({ item, status }) => {
 	const [cartStatus, setCartStatus] = useState(status);
@@ -25,7 +26,11 @@ export const BeerCard = ({ item, status }) => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.imageBlock}>
-				<img src={image_url} alt={name} className={styles.image} />
+				<img
+					src={image_url == null ? imageMissing : image_url}
+					alt={name}
+					className={styles.image}
+				/>
 				<div className={styles.composition}>
 					<div>{`Abv: ` + abv}</div>
 					<div>{`Ibu: ` + ibu}</div>
@@ -40,7 +45,6 @@ export const BeerCard = ({ item, status }) => {
 					<Button
 						text={cartStatus ? 'Remove from cart' : 'Add to cart'}
 						fn={changeCartStatus}
-
 					/>
 				</div>
 			</div>
