@@ -19,10 +19,29 @@
     width: auto;
     max-height: 200px;
     padding: 20px 0;
+    user-select: none;
 }
 
 .buttonsBlock {
     display: flex;
     flex: 1;
     justify-content: space-around;
+}
+
+@media (max-width: 1280px) {
+    .buttonsBlock{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 920px){
+    .container{
+        width: 30%;
+    }
+}
+
+@media (max-width: 600px){
+    .container{
+        width: 45%;
+    }
 }
