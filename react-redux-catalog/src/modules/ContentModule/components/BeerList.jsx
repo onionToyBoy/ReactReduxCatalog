@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 import styles from './BeerList.module.css';
 import { BeerCard } from './BeerCard';
+import { selectCartList } from '../selectors';
 
-export const BeerList = () => {
-	const [isLoading, setLoading] = useState(true);
-	const [data, setData] = useState([]);
+export const BeerList = ({ data }) => {
+	const cartList = useSelector(selectCartList);
 
-	useEffect(() => {
-		fetch('https://api.punkapi.com/v2/beers')
-			.then((response) => response.json())
-			.then((json) => setData(json))
-			.catch((error) => console.error(error))
-			.finally(() => setLoading(false));
-	}, []);
+	const checkStatus = (id) => {
+		return cartList.some((el) => el.id === id);
+	};
 
 	return (
 		<div className={styles.container}>
-			{!isLoading && data.map((el) => <BeerCard key={el.id} item={el} />)}
+			{data.map((el) => (
+				<BeerCard key={el.id} item={el} status={checkStatus(el.id)} />
+			))}
 		</div>
 	);
 };

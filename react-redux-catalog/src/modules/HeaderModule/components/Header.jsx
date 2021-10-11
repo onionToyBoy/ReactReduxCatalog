@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import styles from './Header.module.css';
-
+import { store } from '../../../store/store';
 export const Header = () => {
 	return (
 		<nav className={styles.container}>
@@ -17,7 +17,12 @@ export const Header = () => {
 						className={styles.cart}
 					/>
 				</NavLink>
-				<div className={styles.logIn}>Log in</div>
+				<div
+					className={styles.logIn}
+					onClick={() => console.log(store.getState())}
+				>
+					Log in
+				</div>
 			</div>
 		</nav>
 	);

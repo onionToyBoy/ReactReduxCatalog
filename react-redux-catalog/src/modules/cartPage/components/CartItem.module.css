@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    width: 23%;
+    border: 1px solid rgb(74, 23, 122);
+    margin: 8px;
+    padding: 20px;
+    background-color: rgb(61, 61, 61);
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 17px;
+    color: rgb(173, 150, 14);
+    margin: auto;
+}
+
+.image {
+    width: auto;
+    max-height: 200px;
+    padding: 20px 0;
+}
+
+.buttonsBlock {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}

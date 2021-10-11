@@ -4,11 +4,8 @@
     border: 1px solid rgb(74, 23, 122);
     margin: 10px;
     padding: 20px;
-    background-color: rgb(71, 71, 71);
+    background-color: rgb(61, 61, 61);
     border-radius: 5px;
-    flex-direction: row;
-    
-  
 }
 
 .container:hover {
@@ -23,6 +20,7 @@
 
 .image {
     max-height: 210px;
+    max-width: 70px;
     width: auto;
     user-select: none;
     padding-bottom: 20px;
@@ -45,9 +43,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 70%;
+    width: 68%;
     align-items: center;
-    padding: 20px 0;
     color: rgb(156, 153, 149);
     font-size: 15px;
 }
@@ -61,6 +58,7 @@
 
 .discription {
     margin: 0 auto;
+    padding: 10px;
 }
 
 .button {
@@ -70,4 +68,26 @@
     display: flex;
     width: 200px;
     padding-top: 20px;
+}
+
+@media (max-width: 1280px){
+    .image {
+        max-height: 170px;
+    }
+}
+
+@media (max-width: 1100px){
+    .image {
+        max-height: 200px;
+    }
+    .container{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 710px){
+    .image {
+        max-height: 150px;
+    }
 }

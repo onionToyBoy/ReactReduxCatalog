@@ -1,18 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import './App.css';
 import { store } from './store/store';
 import { Content } from './modules/ContentModule/components/Content';
 import { Header } from './modules/HeaderModule/components/Header';
+import { CartList } from './modules/cartPage/components/CartList';
+
 
 function App() {
 	return (
 		<Provider store={store}>
 			<Router className='App'>
 				<Header />
-				<Content />
+				<Route path='/' exact component={Content} />
+				<Route path='/cart' component={CartList} />
 			</Router>
 		</Provider>
 	);
