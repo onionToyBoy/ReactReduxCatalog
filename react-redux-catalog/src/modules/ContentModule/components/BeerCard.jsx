@@ -45,6 +45,7 @@ export const BeerCard = ({ item, status }) => {
 					<Button
 						text={cartStatus ? 'Remove from cart' : 'Add to cart'}
 						fn={changeCartStatus}
+						color={cartStatus ? 'red' : 'green'}
 					/>
 				</div>
 			</div>

@@ -2,11 +2,16 @@ import React from 'react';
 
 import styles from './Button.module.css';
 
-export const Button = ({ text, fn }) => {
+export const Button = ({ text, fn, color }) => {
 	const chooseButtonStyle = () => {
-		return text === 'Add to cart'
-			? styles.button
-			: styles.button + ' ' + styles.clickedButton;
+		switch (color) {
+			case 'red':
+				return styles.button + ' ' + styles.redButton;
+			case 'green':
+				return styles.button + ' ' + styles.greenButton;
+			default:
+				return styles.button;
+		}
 	};
 
 	return (

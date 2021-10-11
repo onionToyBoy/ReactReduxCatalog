@@ -2,6 +2,7 @@ import {
 	SET_BEER,
 	ADD_TO_CART,
 	REMOVE_FROM_CART,
+	EMPTY_THE_CART,
 } from '../../../constants/actionTypes';
 
 export const INITIAL_STATE = {
@@ -30,6 +31,11 @@ export const beerReducer = (state = INITIAL_STATE, action) => {
 				cart: updatedCart,
 			};
 		}
+		case EMPTY_THE_CART:
+			return {
+				...state,
+				cart: [],
+			};
 		default:
 			return state;
 	}
