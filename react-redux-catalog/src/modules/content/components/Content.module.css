@@ -11,12 +11,20 @@
     background-color: #353535FF;
     color: cornsilk;
     font-size: 20px;
-    width: 300px;
     padding: 10px;
     flex: 4;
     margin-right: 10px;
     border-radius: 5px;
 }
+
+.filters{
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+
 
 .serchBar {
     display: flex;

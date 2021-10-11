@@ -1,13 +1,13 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectCartList } from '../../ContentModule/selectors';
 import { NavLink } from 'react-router-dom';
 
 import styles from './CartList.module.css';
 import emptyCart from '../../../images/emptyCart.png';
 import { CartItem } from './CartItem';
-import { Button } from '../../ContentModule/components/Button';
 import { emptyTheCart } from '../actions';
+import { selectCartList } from '../../content/selectors';
+import { Button } from '../../../componenets/Button';
 
 export const CartList = () => {
 	const cartList = useSelector(selectCartList);

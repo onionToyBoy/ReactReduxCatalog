@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 
 import './App.css';
 import { store } from './store/store';
-import { Content } from './modules/ContentModule/components/Content';
-import { Header } from './modules/HeaderModule/components/Header';
+import { Content } from './modules/content/components/Content';
+import { Header } from './modules/header/components/Header';
 import { CartList } from './modules/cartPage/components/CartList';
 
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
 import styles from './BeerCard.module.css';
-import { Button } from './Button';
+import { Button } from '../../../componenets/Button';
 import { addToCart, removeFromCart } from '../actions';
 import imageMissing from '../../../images/imageMissing.png';
 
@@ -11,7 +11,7 @@ export const BeerCard = ({ item, status }) => {
 
 	const dispatch = useDispatch();
 
-	const { name, description, image_url, abv, ibu, id } = item;
+	const { name, description, image_url, abv, ibu, id, srm, ph } = item;
 
 	const changeCartStatus = () => {
 		if (cartStatus) {
@@ -23,6 +23,10 @@ export const BeerCard = ({ item, status }) => {
 		}
 	};
 
+	const infoVerification = (info) =>{
+		return info? info: '-';
+	}
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.imageBlock}>
@@ -32,11 +36,11 @@ export const BeerCard = ({ item, status }) => {
 					className={styles.image}
 				/>
 				<div className={styles.composition}>
-					<div>{`Abv: ` + abv}</div>
-					<div>{`Ibu: ` + ibu}</div>
+					<div>{`ABV: ` + infoVerification(abv)}</div>
+					<div>{`IBU: ` + infoVerification(ibu)}</div>
+					<div>{`SRM: ` + infoVerification(srm)}</div>
 				</div>
 			</div>
-
 			<div className={styles.infoBlock}>
 				<div className={styles.name}>{name}</div>
 

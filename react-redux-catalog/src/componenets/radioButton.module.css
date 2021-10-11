@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    color: rgb(141, 141, 141);
+}
+
+.checkBox{
+    border: 2px solid rgb(110, 110, 110);
+    border-radius: 50px;
+    background-color: rgb(53, 53, 53);
+    height: 20px;
+    width: 20px;
+}
+
+.selected{
+    border: 7px solid rgb(150, 129, 13);;
+}
+
+.label{
+    font-size: 18px;
+    user-select: none;
+    padding-left: 20px;
+}
+
+.checkBox:hover {
+    background-color: #5E5B65FF;
+    transition: 0.1s;
+}
+
+.checkBox:active {
+    background-color: rgb(185, 181, 189);
+}
