@@ -42,9 +42,9 @@ export const BeerCard = ({ item, status }) => {
 				</div>
 			</div>
 			<div className={styles.infoBlock}>
-				<div className={styles.name}>{name}</div>
+				<h3 className={styles.name}>{name}</h3>
 
-				<div className={styles.description}>{description}</div>
+				<p className={styles.description}>{description}</p>
 				<div className={styles.button}>
 					<Button
 						text={cartStatus ? 'Remove from cart' : 'Add to cart'}

@@ -3,11 +3,13 @@ import {
 	ADD_TO_CART,
 	REMOVE_FROM_CART,
 	EMPTY_THE_CART,
+	SET_LOADING_STATUS,
 } from '../../../constants/actionTypes';
 
 export const INITIAL_STATE = {
 	beer: [],
 	cart: [],
+	isLoading: false,
 };
 
 export const beerReducer = (state = INITIAL_STATE, action) => {
@@ -29,6 +31,12 @@ export const beerReducer = (state = INITIAL_STATE, action) => {
 			return {
 				...state,
 				cart: updatedCart,
+			};
+		}
+		case SET_LOADING_STATUS: {
+			return {
+				...state,
+				isLoading: action.payload,
 			};
 		}
 		case EMPTY_THE_CART:

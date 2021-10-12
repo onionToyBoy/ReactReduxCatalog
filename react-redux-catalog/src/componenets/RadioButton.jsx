@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './radioButton.module.css';
+import styles from './RadioButton.module.css';
 
 export const RadioButton = ({ label, fn, isSelected, id }) => {
 	

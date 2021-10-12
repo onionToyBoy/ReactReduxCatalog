@@ -10,7 +10,6 @@ import { RadioButton } from '../../../componenets/RadioButton';
 
 export const Content = () => {
 	const [searchValue, setSearchValue] = useState('');
-	//const [isLoading, setLoading] = useState(true);
 	const [filter, setFilter] = useState('');
 
 	const dispatch = useDispatch();
