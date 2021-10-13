@@ -25,12 +25,12 @@
     background-color: rgb(185, 181, 189);
 }
 
-.redButton{
+.redButton {
     border: 1px solid rgb(209, 101, 74);
     transition: 0.2s;
 }
 
-.greenButton{
+.greenButton {
     border: 1px solid rgb(82, 148, 85);
     transition: 0.2s;
 }

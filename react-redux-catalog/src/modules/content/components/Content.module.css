@@ -23,6 +23,7 @@
     display: flex;
     width: 60%;
     justify-content: space-around;
+    max-width: 700px;
 }
 
 
@@ -40,6 +41,7 @@
     border: 2px solid #353535FF;
     padding: 0 10px;
     border-radius: 10px;
+    user-select: none;
 }
 
 .noResults{

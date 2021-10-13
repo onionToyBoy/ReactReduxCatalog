@@ -1,0 +1,31 @@
+.container {
+    padding: 5px;
+    width: 70%;
+    margin: auto;
+    user-select: none;
+
+}
+
+.title {
+    font-size: 17px;
+    color: rgb(201, 172, 46);
+    padding: 13px 0;
+}
+
+.input {
+    display: flex;
+    background-color: #353535FF;
+    color: cornsilk;
+    font-size: 20px;
+    padding: 10px;
+    flex: 4;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+    width: 100%;
+    /* margin: auto; */
+}
+
+.error{
+    color: red;
+}

@@ -1,0 +1,83 @@
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000005B;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.form {
+    background: rgba(42, 18, 42, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(135, 119, 31, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 35%;
+    z-index: 2;
+    margin: auto;
+    padding: 20px;
+}
+
+.cross {
+    float: right;
+    font-size: 40px;
+    color: rgb(201, 172, 46);
+    padding-right: 10px;
+    user-select: none;
+}
+
+.cross:hover {
+    color: rgb(245, 226, 141);
+}
+
+.cross:active {
+    color: white;
+}
+
+.title {
+    font-size: 30px;
+    color: rgb(201, 172, 46);
+    text-align: center;
+    padding-top: 30px;
+}
+
+.buttonBlock {
+    padding-top: 20px;
+    width: 30%;
+    margin: auto;
+}
+
+.button {
+    border: 1px solid rgb(173, 175, 173);
+    border-radius: 5px;
+    background-color: rgb(53, 53, 53);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex: 1;
+    transition: 0.2s;
+    color:rgb(173, 175, 173);
+    user-select: none;
+    margin: auto;
+    font-size: 16px;
+}
+
+.active{
+    color: rgb(82, 148, 85);
+    border: 1px solid rgb(82, 148, 85);
+}
+
+.active:hover {
+    background-color: #5E5B65FF;
+    transition: 0.1s;
+    color: rgb(25, 194, 33);
+    border: 1px solid rgb(25, 194, 33);
+}
+
+.active:active {
+    background-color: rgb(185, 181, 189);
+}
