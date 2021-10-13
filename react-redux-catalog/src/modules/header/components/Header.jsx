@@ -2,18 +2,22 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { selectFormStatus } from '../selectors';
+import { selectAuthorizationStatus } from '../selectors';
 import styles from './Header.module.css';
-import { setFormStatus } from '../actions';
+import { setFormStatus, setAuthorizationStatus } from '../actions';
 
 export const Header = () => {
 	const dispatch = useDispatch();
 
-	const formStatus = useSelector(selectFormStatus);
+	const isLogged = useSelector(selectAuthorizationStatus);
 
-	const checkIsFormOpen = () => {
-		formStatus ? dispatch(setFormStatus(false)) : dispatch(setFormStatus(true));
-		console.log(formStatus);
+	const onLogIn = () => {
+		dispatch(setFormStatus(true));
+	};
+
+	const onLogOut = () => {
+		dispatch(setAuthorizationStatus(false));
+		dispatch(setAuthorizationStatus(false));
 	};
 
 	return (
@@ -29,8 +33,8 @@ export const Header = () => {
 						className={styles.cart}
 					/>
 				</NavLink>
-				<div className={styles.logIn} onClick={checkIsFormOpen}>
-					Log in
+				<div className={styles.logIn} onClick={isLogged ? onLogOut : onLogIn}>
+					{isLogged ? 'Log out' : 'Log in'}
 				</div>
 			</div>
 		</nav>

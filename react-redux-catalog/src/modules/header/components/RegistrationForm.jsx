@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 import styles from './RegistrationForm.module.css';
-import { setFormStatus } from '../actions';
+import { setFormStatus, setAuthorizationStatus } from '../actions';
 import { Input } from './Input';
 import { useInput } from '../../../hooks';
 
@@ -19,9 +19,14 @@ export const RegistrationForm = () => {
 		}
 	};
 
-	const checkValid=()=>{
-		return !email.inputValid||!password.inputValid||!name.inputValid;
-	}
+	const onSubmit = () => {
+		dispatch(setAuthorizationStatus(true));
+		dispatch(setFormStatus(false));
+	};
+
+	const checkValid = () => {
+		return !email.inputValid || !password.inputValid || !name.inputValid;
+	};
 
 	return (
 		<div
@@ -29,7 +34,7 @@ export const RegistrationForm = () => {
 			className={styles.container}
 			onClick={(e) => closeForm(e.target.id)}
 		>
-			<form className={styles.form} onSubmit>
+			<form className={styles.form} onSubmit={onSubmit}>
 				<div className={styles.cross} id='cross'>
 					x
 				</div>
@@ -64,7 +69,9 @@ export const RegistrationForm = () => {
 						type='submit'
 						name='submit'
 						value='Submit'
-						className={checkValid()?styles.button: styles.button + ' ' + styles.active}
+						className={
+							checkValid() ? styles.button : styles.button + ' ' + styles.active
+						}
 						disabled={checkValid()}
 					/>
 				</div>

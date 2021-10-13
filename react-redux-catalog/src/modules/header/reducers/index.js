@@ -1,7 +1,11 @@
-import { SET_FORM_STATUS } from '../../../constants/actionTypes';
+import {
+	SET_FORM_STATUS,
+	SET_AUTHORIZATION_STATUS,
+} from '../../../constants/actionTypes';
 
 export const INITIAL_STATE = {
 	formIsOpen: false,
+	isLogged: false,
 };
 
 export const headerReducer = (state = INITIAL_STATE, action) => {
@@ -10,6 +14,11 @@ export const headerReducer = (state = INITIAL_STATE, action) => {
 			return {
 				...state,
 				formIsOpen: action.payload,
+			};
+		case SET_AUTHORIZATION_STATUS:
+			return {
+				...state,
+				isLogged: action.payload,
 			};
 		default:
 			return state;

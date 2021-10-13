@@ -42,8 +42,11 @@ const useValidation = (value, validations) => {
 					break;
 
 				case 'isEmail':
-					const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-   					 re.test(String(value).toLowerCase())?setEmailError(false):setEmailError(true);
+					const re =
+						/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+					re.test(String(value).toLowerCase())
+						? setEmailError(false)
+						: setEmailError(true);
 					break;
 
 				default:
@@ -53,19 +56,17 @@ const useValidation = (value, validations) => {
 	}, [value, validations]);
 
 	useEffect(() => {
-		if(isEmpty||isEmailError||minLengthError){
-			setInputValid(false)
+		if (isEmpty || isEmailError || minLengthError) {
+			setInputValid(false);
+		} else {
+			setInputValid(true);
 		}
-		else{
-			setInputValid(true)
-		}
-
-	},[isEmpty,isEmailError,minLengthError]);
+	}, [isEmpty, isEmailError, minLengthError]);
 
 	return {
 		isEmpty,
 		minLengthError,
 		isEmailError,
-		inputValid
+		inputValid,
 	};
 };
