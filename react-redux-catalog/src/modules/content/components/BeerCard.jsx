@@ -33,17 +33,16 @@ export const BeerCard = ({ item, status }) => {
 				<img
 					src={image_url == null ? imageMissing : image_url}
 					alt={name}
-					className={styles.image}
+					className={image_url == null ? styles.withoutImage:styles.image}
 				/>
+			</div>
+			<div className={styles.infoBlock}>
+				<h3 className={styles.name}>{name}</h3>
 				<div className={styles.composition}>
 					<div>{`ABV: ` + infoVerification(abv)}</div>
 					<div>{`IBU: ` + infoVerification(ibu)}</div>
 					<div>{`SRM: ` + infoVerification(srm)}</div>
 				</div>
-			</div>
-			<div className={styles.infoBlock}>
-				<h3 className={styles.name}>{name}</h3>
-
 				<p className={styles.description}>{description}</p>
 				<div className={styles.button}>
 					<Button

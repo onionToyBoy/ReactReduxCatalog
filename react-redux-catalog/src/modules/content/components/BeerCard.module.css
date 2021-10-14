@@ -13,30 +13,36 @@
 }
 
 .imageBlock {
-    width: 30%;
-    height: 100%;
+    width: 28%;
     padding: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .image {
-    height: 210px;
+    max-height: 210px;
     max-width: 90px;
     width: auto;
     user-select: none;
-    padding-bottom: 20px;
+
+}
+
+.withoutImage {
+    height: 70px;
+    width: auto;
+    user-select: none;
 }
 
 .composition {
     display: flex;
-    /* margin: 0 auto; */
     color: rgb(173, 150, 14);
     font-size: 14px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
 .composition div {
-    padding-top: 10px;
+    padding: 10px;
 }
 
 .infoBlock {
@@ -73,13 +79,13 @@
 
 @media (max-width: 1280px) {
     .image {
-        max-height: 170px;
+        max-width: 80px;
     }
 }
 
 @media (max-width: 1100px) {
     .image {
-        max-height: 200px;
+        max-width: 70px;
     }
 
     .container {
