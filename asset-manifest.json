@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ReactReduxCatalog/static/css/main.492ad659.chunk.css",
-    "main.js": "/ReactReduxCatalog/static/js/main.75cfca56.chunk.js",
-    "main.js.map": "/ReactReduxCatalog/static/js/main.75cfca56.chunk.js.map",
+    "main.css": "/ReactReduxCatalog/static/css/main.cde59aad.chunk.css",
+    "main.js": "/ReactReduxCatalog/static/js/main.e6a0a58b.chunk.js",
+    "main.js.map": "/ReactReduxCatalog/static/js/main.e6a0a58b.chunk.js.map",
     "runtime-main.js": "/ReactReduxCatalog/static/js/runtime-main.484606bc.js",
     "runtime-main.js.map": "/ReactReduxCatalog/static/js/runtime-main.484606bc.js.map",
     "static/js/2.c2db2d4f.chunk.js": "/ReactReduxCatalog/static/js/2.c2db2d4f.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.9e1125a2.chunk.js": "/ReactReduxCatalog/static/js/3.9e1125a2.chunk.js",
     "static/js/3.9e1125a2.chunk.js.map": "/ReactReduxCatalog/static/js/3.9e1125a2.chunk.js.map",
     "index.html": "/ReactReduxCatalog/index.html",
-    "static/css/main.492ad659.chunk.css.map": "/ReactReduxCatalog/static/css/main.492ad659.chunk.css.map",
+    "static/css/main.cde59aad.chunk.css.map": "/ReactReduxCatalog/static/css/main.cde59aad.chunk.css.map",
     "static/js/2.c2db2d4f.chunk.js.LICENSE.txt": "/ReactReduxCatalog/static/js/2.c2db2d4f.chunk.js.LICENSE.txt",
     "static/media/emptyCart.713f204a.png": "/ReactReduxCatalog/static/media/emptyCart.713f204a.png",
     "static/media/imageMissing.3c47ad26.png": "/ReactReduxCatalog/static/media/imageMissing.3c47ad26.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.484606bc.js",
     "static/js/2.c2db2d4f.chunk.js",
-    "static/css/main.492ad659.chunk.css",
-    "static/js/main.75cfca56.chunk.js"
+    "static/css/main.cde59aad.chunk.css",
+    "static/js/main.e6a0a58b.chunk.js"
   ]
 }
