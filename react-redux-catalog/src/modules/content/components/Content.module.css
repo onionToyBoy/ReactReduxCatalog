@@ -68,12 +68,26 @@
     background-color: rgb(53, 53, 53);
     font-size: 18px;
     color: rgb(110, 110, 110);
+    user-select: none;
+}
+.pageNumber:hover{
+    font-size: 22px;
+    background-color: rgb(59, 59, 59);
+}
+
+.pageNumber:active{
+    background-color: rgb(129, 129, 129);
 }
 
 .active{
    color:rgb(173, 150, 14);;
    font-size: 22px;
    background-color: rgb(70, 70, 70);
+}
+
+.active:hover{
+    font-size: 24px;
+    background-color: rgb(90, 90, 90);
 }
 
 

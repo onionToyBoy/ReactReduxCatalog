@@ -3,8 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import styles from './Content.module.css';
 import { BeerList } from './BeerList';
-import { selectBeerList, selectCurrentPage } from '../selectors';
-import { getBeer } from '../thunk';
+import {
+	selectBeerList,
+	selectCurrentPage,
+	selectOpendPages,
+	selectSearchResults,
+} from '../selectors';
+import { getBeer, searchBeer } from '../thunk';
 import noResults from '../../../images/noResults.png';
 import { RadioButton } from '../../../componenets/RadioButton';
 import { changeCurrentPage } from '../actions';
@@ -15,13 +20,20 @@ export const Content = () => {
 
 	const dispatch = useDispatch();
 
-	const beerList = useSelector(selectBeerList);
 	const currentPage = useSelector(selectCurrentPage);
+	const opendPages = useSelector(selectOpendPages);
+	const beerList = useSelector(selectBeerList(currentPage));
+	const searchResults = useSelector(selectSearchResults);
 
 	useEffect(() => {
-		dispatch(getBeer(searchValue, currentPage));
-		
-	}, [searchValue, currentPage, dispatch]);
+		if (!Object.keys(opendPages).includes(currentPage)) {
+			dispatch(getBeer(currentPage));
+		}
+	}, [dispatch, currentPage, opendPages]);
+
+	useEffect(() => {
+		searchValue && dispatch(searchBeer(searchValue));
+	}, [searchValue, dispatch]);
 
 	const createCross = () => {
 		return (
@@ -43,7 +55,9 @@ export const Content = () => {
 
 	const next = (e) => {
 		dispatch(changeCurrentPage(e.target.innerHTML));
-		dispatch(getBeer('',currentPage));
+		if (!Object.keys(opendPages).includes(currentPage)) {
+			dispatch(getBeer(currentPage));
+		}
 	};
 
 	return (
@@ -78,11 +92,12 @@ export const Content = () => {
 					isSelected={filter === 'srm' && true}
 				/>
 			</div>
-			{beerList.length ? (
-				<BeerList data={sortBeer(beerList)} />
-			) : (
+			{beerList && <BeerList data={sortBeer(searchValue && searchResults? searchResults : beerList)} />}
+
+			{searchValue&&searchResults&&searchResults.length === 0 && (
 				<img src={noResults} className={styles.noResults} alt='no results' />
 			)}
+
 			<div className={styles.pagination}>
 				<div
 					onClick={next}

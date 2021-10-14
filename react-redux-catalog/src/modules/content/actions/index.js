@@ -6,7 +6,7 @@ import {
 	CHANGE_CURRENT_PAGE
 } from '../../../constants/actionTypes';
 
-export const setBeer = (beer, page ) => ({
+export const setBeer = (beer, page='SearchResults' ) => ({
 	type: SET_BEER,
 	payload: {
 		beer,

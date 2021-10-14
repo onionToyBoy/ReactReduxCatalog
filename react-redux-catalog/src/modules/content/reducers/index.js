@@ -8,7 +8,7 @@ import {
 } from '../../../constants/actionTypes';
 
 export const INITIAL_STATE = {
-	beer: [],
+	beer: {},
 	cart: [],
 	isLoading: false,
 	currentPage: '1',
@@ -23,7 +23,7 @@ export const beerReducer = (state = INITIAL_STATE, action) => {
 			};
 			return {
 				...state,
-				beer: action.payload.beer,
+				beer: updatedBeer,
 			};
 		case CHANGE_CURRENT_PAGE: {
 			return {
