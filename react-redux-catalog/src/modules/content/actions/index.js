@@ -2,12 +2,21 @@ import {
 	SET_BEER,
 	ADD_TO_CART,
 	REMOVE_FROM_CART,
-	SET_LOADING_STATUS
+	SET_LOADING_STATUS,
+	CHANGE_CURRENT_PAGE
 } from '../../../constants/actionTypes';
 
-export const setBeer = (beer) => ({
+export const setBeer = (beer, page ) => ({
 	type: SET_BEER,
-	payload: beer,
+	payload: {
+		beer,
+		page,
+	},
+});
+
+export const changeCurrentPage = (page) => ({
+	type: CHANGE_CURRENT_PAGE,
+	payload: page,
 });
 
 export const addToCart = (beer) => ({
@@ -20,8 +29,7 @@ export const removeFromCart = (key) => ({
 	payload: key,
 });
 
-export const setLoadingStatus = isLoading => ({
+export const setLoadingStatus = (isLoading) => ({
 	type: SET_LOADING_STATUS,
 	payload: isLoading,
-  });
-  
+});

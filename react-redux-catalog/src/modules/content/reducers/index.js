@@ -4,21 +4,33 @@ import {
 	REMOVE_FROM_CART,
 	EMPTY_THE_CART,
 	SET_LOADING_STATUS,
+	CHANGE_CURRENT_PAGE,
 } from '../../../constants/actionTypes';
 
 export const INITIAL_STATE = {
 	beer: [],
 	cart: [],
 	isLoading: false,
+	currentPage: '1',
 };
 
 export const beerReducer = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
 		case SET_BEER:
+			const updatedBeer = {
+				...state.beer,
+				[action.payload.page]: action.payload.beer,
+			};
 			return {
 				...state,
-				beer: action.payload,
+				beer: action.payload.beer,
 			};
+		case CHANGE_CURRENT_PAGE: {
+			return {
+				...state,
+				currentPage: action.payload,
+			};
+		}
 		case ADD_TO_CART: {
 			return {
 				...state,

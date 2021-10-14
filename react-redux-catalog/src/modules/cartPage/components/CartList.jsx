@@ -1,16 +1,17 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
 import styles from './CartList.module.css';
 import emptyCart from '../../../images/emptyCart.png';
 import { CartItem } from './CartItem';
 import { emptyTheCart } from '../actions';
-import { selectCartList } from '../../content/selectors';
+import { selectCartList, selectCurrentPage } from '../../content/selectors';
 import { Button } from '../../../componenets/Button';
 
 export const CartList = () => {
 	const cartList = useSelector(selectCartList);
+	const currentPage = useSelector(selectCurrentPage);
 
 	const dispatch = useDispatch();
 
@@ -21,9 +22,9 @@ export const CartList = () => {
 	return (
 		<div className={styles.content}>
 			<div className={styles.buttonsBlock}>
-				<NavLink to=''>
+				<Link to={`/page${currentPage}`}>
 					<Button text='To the homepage' />
-				</NavLink>
+				</Link>
 				<div className={cartList.length ? styles.visible : styles.invisible}>
 					<div>
 						<Button text='Empty the cart' fn={onEmpty} />

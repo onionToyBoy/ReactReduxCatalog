@@ -1,12 +1,12 @@
 import { getBeerList } from '../../../requests/getBeerList';
 import { setBeer, setLoadingStatus } from '../actions';
 
-export function getBeer(searchValue) {
+export function getBeer(searchValue, beerPage) {
 	return async (dispatch) => {
 		try {
 			dispatch(setLoadingStatus(true));
 
-			const beer = await getBeerList(searchValue);
+			const beer = await getBeerList(searchValue, beerPage);
 
 			dispatch(setBeer(beer));
 		} catch (err) {

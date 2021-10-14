@@ -11,7 +11,7 @@ export const BeerCard = ({ item, status }) => {
 
 	const dispatch = useDispatch();
 
-	const { name, description, image_url, abv, ibu, id, srm, ph } = item;
+	const { name, description, image_url, abv, ibu, id, srm } = item;
 
 	const changeCartStatus = () => {
 		if (cartStatus) {

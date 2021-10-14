@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { selectAuthorizationStatus } from '../selectors';
@@ -23,16 +23,16 @@ export const Header = () => {
 	return (
 		<nav className={styles.container}>
 			<div className={styles.navBlock}>
-				<NavLink to='' className={styles.logo}>
+				<div className={styles.logo}>
 					<span>Task for Andersen</span>
-				</NavLink>
-				<NavLink to='/cart'>
+				</div>
+				<Link to='/cart'>
 					<img
 						src='https://cdn0.iconfinder.com/data/icons/minimal-set-seven/32/minimal-49-512.png'
 						alt='cart'
 						className={styles.cart}
 					/>
-				</NavLink>
+				</Link>
 				<div className={styles.logIn} onClick={isLogged ? onLogOut : onLogIn}>
 					{isLogged ? 'Log out' : 'Log in'}
 				</div>

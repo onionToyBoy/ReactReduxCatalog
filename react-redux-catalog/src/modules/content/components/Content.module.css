@@ -17,7 +17,7 @@
     border-radius: 5px;
 }
 
-.filters{
+.filters {
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -44,7 +44,7 @@
     user-select: none;
 }
 
-.noResults{
+.noResults {
     width: 40%;
     height: auto;
     padding: 50px 0;
@@ -53,8 +53,32 @@
     margin-right: auto
 }
 
-@media (max-width: 1280px){
-    .filters{
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pageNumber {
+    width: 40px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(110, 110, 110);
+    background-color: rgb(53, 53, 53);
+    font-size: 18px;
+    color: rgb(110, 110, 110);
+}
+
+.active{
+   color:rgb(173, 150, 14);;
+   font-size: 22px;
+   background-color: rgb(70, 70, 70);
+}
+
+
+@media (max-width: 1280px) {
+    .filters {
         width: 100%;
     }
 
