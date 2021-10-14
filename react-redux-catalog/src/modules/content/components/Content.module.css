@@ -74,6 +74,7 @@
 .pageNumber:hover {
     font-size: 22px;
     background-color: rgb(59, 59, 59);
+    box-shadow: 0 8px 32px 0 rgba(135, 119, 31, 0.37);
 }
 
 .pageNumber:active {
@@ -85,6 +86,7 @@
     ;
     font-size: 22px;
     background-color: rgb(70, 70, 70);
+    box-shadow: 0 8px 32px 0 rgba(135, 119, 31, 0.37);
 }
 
 .active:hover {
