@@ -6,7 +6,10 @@ import { Content } from '../modules/content/components/Content';
 import { Header } from '../modules/header/components/Header';
 import { CartList } from '../modules/cartPage/components/CartList';
 import { Spinner } from './Spinner';
-import { selectCurrentPage, selectIsLoading } from '../modules/content/selectors';
+import {
+	selectCurrentPage,
+	selectIsLoading,
+} from '../modules/content/selectors';
 import { selectFormStatus } from '../modules/header/selectors';
 import { RegistrationForm } from '../modules/header/components/RegistrationForm';
 

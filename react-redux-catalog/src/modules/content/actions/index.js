@@ -3,10 +3,10 @@ import {
 	ADD_TO_CART,
 	REMOVE_FROM_CART,
 	SET_LOADING_STATUS,
-	CHANGE_CURRENT_PAGE
+	CHANGE_CURRENT_PAGE,
 } from '../../../constants/actionTypes';
 
-export const setBeer = (beer, page='SearchResults' ) => ({
+export const setBeer = (beer, page = 'SearchResults') => ({
 	type: SET_BEER,
 	payload: {
 		beer,

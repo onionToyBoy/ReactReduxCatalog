@@ -18,19 +18,17 @@ export const CartItem = ({ item }) => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.name}>{name}</div>
-			<div className={styles.imageBlock}>
-				<img
-					src={image_url == null ? imageMissing : image_url}
-					alt={name}
-					className={styles.image}
-				/>
-				<div className={styles.buttonsBlock}>
-					<div>
-						<Button text='Remove' fn={onRemove} color='red' />
-					</div>
-					<div>
-						<Button text='Pay now' color='green' />
-					</div>
+			<img
+				src={image_url === null ? imageMissing : image_url}
+				alt={name}
+				className={image_url === null ? styles.withoutImage : styles.image}
+			/>
+			<div className={styles.buttonsBlock}>
+				<div>
+					<Button text='Remove' fn={onRemove} color='red' />
+				</div>
+				<div>
+					<Button text='Pay now' color='green' />
 				</div>
 			</div>
 		</div>

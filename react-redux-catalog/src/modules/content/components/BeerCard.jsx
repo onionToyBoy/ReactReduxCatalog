@@ -23,9 +23,9 @@ export const BeerCard = ({ item, status }) => {
 		}
 	};
 
-	const infoVerification = (info) =>{
-		return info? info: '-';
-	}
+	const infoVerification = (info) => {
+		return info ? info : '-';
+	};
 
 	return (
 		<div className={styles.container}>
@@ -33,7 +33,7 @@ export const BeerCard = ({ item, status }) => {
 				<img
 					src={image_url == null ? imageMissing : image_url}
 					alt={name}
-					className={image_url == null ? styles.withoutImage:styles.image}
+					className={image_url == null ? styles.withoutImage : styles.image}
 				/>
 			</div>
 			<div className={styles.infoBlock}>

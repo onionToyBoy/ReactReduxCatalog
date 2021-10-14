@@ -7,6 +7,7 @@
     background-color: rgb(61, 61, 61);
     border-radius: 5px;
     flex-direction: column;
+    align-items: space-between;
 }
 
 .name {
@@ -22,26 +23,35 @@
     user-select: none;
 }
 
+.withoutImage {
+    width: 70px;
+    height: auto;
+    padding: 60px 0;
+    user-select: none;
+}
+
 .buttonsBlock {
     display: flex;
     flex: 1;
     justify-content: space-around;
+    align-items: end;
+
 }
 
 @media (max-width: 1280px) {
-    .buttonsBlock{
+    .buttonsBlock {
         flex-direction: column;
     }
 }
 
-@media (max-width: 920px){
-    .container{
+@media (max-width: 920px) {
+    .container {
         width: 30%;
     }
 }
 
-@media (max-width: 600px){
-    .container{
+@media (max-width: 600px) {
+    .container {
         width: 45%;
     }
 }

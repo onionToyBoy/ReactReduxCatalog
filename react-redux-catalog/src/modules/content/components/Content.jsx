@@ -92,9 +92,15 @@ export const Content = () => {
 					isSelected={filter === 'srm' && true}
 				/>
 			</div>
-			{beerList && <BeerList data={sortBeer(searchValue && searchResults? searchResults : beerList)} />}
+			{beerList && (
+				<BeerList
+					data={sortBeer(
+						searchValue && searchResults ? searchResults : beerList
+					)}
+				/>
+			)}
 
-			{searchValue&&searchResults&&searchResults.length === 0 && (
+			{searchValue && searchResults && searchResults.length === 0 && (
 				<img src={noResults} className={styles.noResults} alt='no results' />
 			)}
 

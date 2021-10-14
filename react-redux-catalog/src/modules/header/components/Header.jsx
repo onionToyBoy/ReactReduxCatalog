@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectAuthorizationStatus } from '../selectors';
 import styles from './Header.module.css';
 import { setFormStatus, setAuthorizationStatus } from '../actions';
-import {store} from '../../../store/store'
+import { store } from '../../../store/store';
 
 export const Header = () => {
 	const dispatch = useDispatch();
@@ -24,7 +24,10 @@ export const Header = () => {
 	return (
 		<nav className={styles.container}>
 			<div className={styles.navBlock}>
-				<div className={styles.logo} onClick={()=>console.log(store.getState())}>
+				<div
+					className={styles.logo}
+					onClick={() => console.log(store.getState())}
+				>
 					<span>Task for Andersen</span>
 				</div>
 				<Link to='/cart'>
