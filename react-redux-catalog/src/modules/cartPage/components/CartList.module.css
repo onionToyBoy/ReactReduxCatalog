@@ -27,9 +27,9 @@
     display: flex;
 }
 
-.visible div{
-padding-left: 10px;
-padding-right: 10px;
+.visible div {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .invisible {
@@ -42,7 +42,7 @@ padding-right: 10px;
     }
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
     .content {
         width: 100%;
     }

@@ -3,7 +3,7 @@
     color: rgb(141, 141, 141);
 }
 
-.checkBox{
+.checkBox {
     border: 2px solid rgb(110, 110, 110);
     border-radius: 100px;
     background-color: rgb(53, 53, 53);
@@ -11,11 +11,12 @@
     width: 23px;
 }
 
-.selected{
-    border: 8px solid rgb(150, 129, 13);;
+.selected {
+    border: 8px solid rgb(150, 129, 13);
+    ;
 }
 
-.label{
+.label {
     font-size: 18px;
     user-select: none;
     padding-left: 20px;

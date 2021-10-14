@@ -6,9 +6,9 @@ export const Button = ({ text, fn, color }) => {
 	const chooseButtonStyle = () => {
 		switch (color) {
 			case 'red':
-				return styles.button + ' ' + styles.redButton;
+				return `${styles.button} ${styles.redButton}`;
 			case 'green':
-				return styles.button + ' ' + styles.greenButton;
+				return `${styles.button} ${styles.greenButton}`;
 			default:
 				return styles.button;
 		}
