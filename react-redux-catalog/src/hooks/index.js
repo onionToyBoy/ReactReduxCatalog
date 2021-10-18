@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { EMAIL_VALIDATION } from '../constants/constants';
 
 export const useInput = (initialValue, validations) => {
 	const [value, setValue] = useState(initialValue);
@@ -42,8 +43,7 @@ const useValidation = (value, validations) => {
 					break;
 
 				case 'isEmail':
-					const re =
-						/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+					const re = EMAIL_VALIDATION;
 					re.test(String(value).toLowerCase())
 						? setEmailError(false)
 						: setEmailError(true);

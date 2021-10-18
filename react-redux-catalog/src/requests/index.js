@@ -6,7 +6,7 @@ export const searchRequest = async (searchValue) => {
 
 		return response.json();
 	} catch (e) {
-		console.log(new Error(e));
+		console.log(e);
 	}
 };
 
@@ -18,6 +18,6 @@ export const getBeerList = async (pageNumber) => {
 
 		return response.json();
 	} catch (e) {
-		console.log(new Error(e));
+		console.log(e);
 	}
 };

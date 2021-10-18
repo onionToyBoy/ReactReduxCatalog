@@ -12,6 +12,7 @@ import {
 } from '../modules/content/selectors';
 import { selectFormStatus } from '../modules/header/selectors';
 import { RegistrationForm } from '../modules/header/components/RegistrationForm';
+import { PATH_TO_CART } from '../constants/constants';
 
 export const AppWrapper = () => {
 	const isLoading = useSelector(selectIsLoading);
@@ -23,7 +24,7 @@ export const AppWrapper = () => {
 			<Redirect from='/' to={`/page${currentPage}`} />
 			<Header />
 			<Route path={`/page${currentPage}`} component={Content} />
-			<Route path='/cart' component={CartList} />
+			<Route path={PATH_TO_CART} component={CartList} />
 			{formStatus && <RegistrationForm />}
 			{isLoading && <Spinner />}
 		</Router>

@@ -9,8 +9,8 @@ export function getBeer(beerPage) {
 			const beer = await getBeerList(beerPage);
 
 			dispatch(setBeer(beer, beerPage));
-		} catch (err) {
-			console.log('Error');
+		} catch (e) {
+			console.log(e);
 		} finally {
 			dispatch(setLoadingStatus(false));
 		}
@@ -25,8 +25,8 @@ export function searchBeer(searchValue) {
 			const beer = await searchRequest(searchValue);
 
 			dispatch(setBeer(beer));
-		} catch (err) {
-			console.log('Error');
+		} catch (e) {
+			console.log(e);
 		} finally {
 			dispatch(setLoadingStatus(false));
 		}
