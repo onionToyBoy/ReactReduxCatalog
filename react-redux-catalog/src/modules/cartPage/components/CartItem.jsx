@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import styles from './CartItem.module.css';
 import imageMissing from '../../../images/imageMissing.png';
 import { Button } from '../../../componenets/Button';
-import { removeFromCart } from '../../content/actions';
+import { removeFromCart } from '../../../store/beers/actions';
 
 export const CartItem = ({ item }) => {
 	const { name, image_url, id } = item;

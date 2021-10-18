@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { selectAuthorizationStatus } from '../selectors';
 import styles from './Header.module.css';
-import { setFormStatus, setAuthorizationStatus } from '../actions';
+import { setFormStatus, setAuthorizationStatus } from '../../../store/header/actions';
 import { CART_SRC, PATH_TO_CART } from '../../../constants/constants';
+import { selectAuthorizationStatus } from '../../../store/header/selectors';
 
 export const Header = () => {
 	const dispatch = useDispatch();

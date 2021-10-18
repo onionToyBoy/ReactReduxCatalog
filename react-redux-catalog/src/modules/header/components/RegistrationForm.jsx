@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 import styles from './RegistrationForm.module.css';
-import { setFormStatus, setAuthorizationStatus } from '../actions';
+import { setFormStatus, setAuthorizationStatus } from '../../../store/header/actions';
 import { Input } from './Input';
 import { useInput } from '../../../hooks';
 

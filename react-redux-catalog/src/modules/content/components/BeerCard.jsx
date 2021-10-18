@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import styles from './BeerCard.module.css';
 import { Button } from '../../../componenets/Button';
-import { addToCart, removeFromCart } from '../actions';
+import { addToCart, removeFromCart } from '../../../store/beers/actions';
 import imageMissing from '../../../images/imageMissing.png';
 
 export const BeerCard = ({ item, status }) => {

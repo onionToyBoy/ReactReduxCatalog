@@ -8,11 +8,11 @@ import {
 	selectCurrentPage,
 	selectOpendPages,
 	selectSearchResults,
-} from '../selectors';
-import { getBeer, searchBeer } from '../thunk';
+} from '../../../store/beers/selectors';
+import { getBeer, searchBeer } from '../../../store/beers/thunk';
 import noResults from '../../../images/noResults.png';
 import { RadioButton } from '../../../componenets/RadioButton';
-import { changeCurrentPage } from '../actions';
+import { changeCurrentPage } from '../../../store/beers/actions';
 
 export const Content = () => {
 	const [searchValue, setSearchValue] = useState('');

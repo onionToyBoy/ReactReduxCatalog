@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 import styles from './BeerList.module.css';
 import { BeerCard } from './BeerCard';
-import { selectCartList } from '../selectors';
+import { selectCartList } from '../../../store/beers/selectors';
 
 export const BeerList = ({ data }) => {
 	const cartList = useSelector(selectCartList);

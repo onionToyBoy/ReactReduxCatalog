@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import { beerReducer } from '../modules/content/reducers';
-import { headerReducer } from '../modules/header/reducers';
+import { headerReducer } from './header/reducers';
+import { beerReducer } from './beers/reducers';
 
 export const rootReducer = combineReducers({ beerReducer, headerReducer });

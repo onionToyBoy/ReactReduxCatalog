@@ -9,8 +9,8 @@ import { Spinner } from './Spinner';
 import {
 	selectCurrentPage,
 	selectIsLoading,
-} from '../modules/content/selectors';
-import { selectFormStatus } from '../modules/header/selectors';
+} from '../store/beers/selectors';
+import { selectFormStatus } from '../store/header/selectors';
 import { RegistrationForm } from '../modules/header/components/RegistrationForm';
 import { PATH_TO_CART } from '../constants/constants';
 

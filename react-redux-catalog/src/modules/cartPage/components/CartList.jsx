@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import styles from './CartList.module.css';
 import emptyCart from '../../../images/emptyCart.png';
 import { CartItem } from './CartItem';
-import { emptyTheCart } from '../actions';
-import { selectCartList, selectCurrentPage } from '../../content/selectors';
+import { emptyTheCart } from '../../../store/cart/actions';
+import { selectCartList, selectCurrentPage } from '../../../store/beers/selectors';
 import { Button } from '../../../componenets/Button';
 
 export const CartList = () => {
